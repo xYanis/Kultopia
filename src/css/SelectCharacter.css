@@ -1,0 +1,27 @@
+.character-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.image-container {
+	position: relative;
+	width: 250px; /* Augmenter la taille du cercle */
+	height: 250px; /* Augmenter la taille du cercle */
+	border-radius: 50%;
+	background-color: #9129a2;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end; /* Pousse l'image vers le bas du cercle */
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.character-image {
+	position: absolute;
+	bottom: 0; /* Positionne l'image au bas du cercle */
+	width: 100%; /* S'ajuste à la largeur du cercle */
+	height: auto; /* Garde les proportions de l'image */
+	object-fit: contain; /* L'image garde ses proportions */
+}
