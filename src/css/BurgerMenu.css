@@ -1,0 +1,21 @@
+.burger-menu {
+display: flex;
+flex-direction: column;
+gap: .5rem;
+margin: 1rem 0 0 1rem;
+}
+
+span {
+    display: block;
+    border: solid rgb(255, 255, 255); 
+    border-radius: 1rem;
+    width: 2.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
