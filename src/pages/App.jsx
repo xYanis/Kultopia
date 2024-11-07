@@ -1,11 +1,8 @@
-import '../css/App.css'
-import BurgerMenu from '../components/BurgerMenu'
+import "../css/App.css";
+import BurgerMenu from "../components/BurgerMenu";
 
 function App() {
-    return (
-        < BurgerMenu/>
-    )
-
+	return <BurgerMenu />;
 }
 
-export default App
+export default App;
