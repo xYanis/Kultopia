@@ -17,8 +17,8 @@
 }
 
 .image-container {
-	width: 250px; /* Taille du cercle */
-	height: 250px; /* Taille du cercle */
+	width: 200px; /* Taille du cercle */
+	height: 200px; /* Taille du cercle */
 	border-radius: 50%;
 	background-color: #9129a2;
 	display: flex;
@@ -57,9 +57,6 @@
 	justify-content: center;
 	transition: transform 0.2s;
 	margin-top: 10px;
-	/* position: absolute; Positionnement absolu par rapport à .image-container */
-	/* top: 50%; Centre verticalement les flèches */
-	/* transform: translateY(-50%); Ajuste la position verticale */
 }
 
 .arrow-button:hover {
@@ -71,7 +68,7 @@
 	content: "";
 	width: 0;
 	height: 0;
-	left: -70px; /* Espace à gauche */
+	/* left: -70px; Espace à gauche */
 	border-style: solid;
 	border-width: 15px 20px 15px 0; /* Taille et orientation du triangle */
 	border-color: transparent #f8ac21 transparent transparent;
@@ -82,7 +79,7 @@
 	content: "";
 	width: 0;
 	height: 0;
-	right: -70px; /* Espace à droite */
+	/* right: -70px; Espace à droite */
 	border-style: solid;
 	border-width: 15px 0 15px 20px; /* Taille et orientation du triangle */
 	border-color: transparent transparent transparent #f8ac21;
@@ -96,8 +93,8 @@
 }
 
 .pseudo-section input {
-	width: 180px; /* Largeur du champ de saisie */
-	padding: 10px;
+	width: 160px; /* Largeur du champ de saisie */
+	padding: 8px;
 	border-radius: 5px;
 	border: 1px solid #ccc;
 	font-size: 14px;
