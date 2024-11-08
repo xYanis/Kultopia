@@ -2,9 +2,10 @@
 
 .character-selector {
 	display: flex;
-	align-items: center;
+	flex-direction: column; /* Aligner les éléments en colonne pour l'avatar et le pseudo */
+	align-items: center; /* Centrer les éléments horizontalement */
 	justify-content: center;
-	gap: 10px; /* Espace entre les boutons et le personnage */
+	gap: 20px; /* Espace entre les éléments */
 }
 
 .character-container {
@@ -12,10 +13,10 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	position: relative;
 }
 
 .image-container {
-	position: relative;
 	width: 250px; /* Taille du cercle */
 	height: 250px; /* Taille du cercle */
 	border-radius: 50%;
@@ -25,14 +26,22 @@
 	align-items: flex-end;
 	overflow: hidden;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	position: relative; /* Ajouté pour être le parent de l'avatar */
 }
 
 .character-image {
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: auto;
 	object-fit: contain;
+}
+.arrow-buttons-container {
+	display: flex;
+	justify-content: space-between; /* Placer les flèches à gauche et à droite */
+	width: 70%;
+	position: absolute;
+	top: 50%; /* Centrer verticalement les flèches */
+	transform: translateY(-50%); /* Ajuster la position verticale */
 }
 
 /* Style du bouton flèche */
@@ -40,14 +49,17 @@
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	width: 60px; 
-	height: 60px; 
+	width: 60px;
+	height: 60px;
 	border-radius: 50%; /* Forme ronde */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: transform 0.2s;
-	margin-top: 10px ;
+	margin-top: 10px;
+	/* position: absolute; Positionnement absolu par rapport à .image-container */
+	/* top: 50%; Centre verticalement les flèches */
+	/* transform: translateY(-50%); Ajuste la position verticale */
 }
 
 .arrow-button:hover {
@@ -59,6 +71,7 @@
 	content: "";
 	width: 0;
 	height: 0;
+	left: -70px; /* Espace à gauche */
 	border-style: solid;
 	border-width: 15px 20px 15px 0; /* Taille et orientation du triangle */
 	border-color: transparent #f8ac21 transparent transparent;
@@ -69,7 +82,35 @@
 	content: "";
 	width: 0;
 	height: 0;
+	right: -70px; /* Espace à droite */
 	border-style: solid;
 	border-width: 15px 0 15px 20px; /* Taille et orientation du triangle */
 	border-color: transparent transparent transparent #f8ac21;
+}
+
+.pseudo-section {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pseudo-section input {
+	width: 180px; /* Largeur du champ de saisie */
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 10px; /* Espacement sous le champ de saisie */
+}
+
+.pseudo-section input::placeholder {
+	color: #aaa;
+}
+
+.error-message {
+	color: red;
+	font-size: 12px;
+	margin-top: 5px;
 }
