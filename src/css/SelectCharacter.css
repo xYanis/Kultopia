@@ -1,3 +1,12 @@
+/* SelectCharacter.css */
+
+.character-selector {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px; /* Espace entre les boutons et le personnage */
+}
+
 .character-container {
 	display: flex;
 	flex-direction: column;
@@ -7,21 +16,60 @@
 
 .image-container {
 	position: relative;
-	width: 250px; /* Augmenter la taille du cercle */
-	height: 250px; /* Augmenter la taille du cercle */
+	width: 250px; /* Taille du cercle */
+	height: 250px; /* Taille du cercle */
 	border-radius: 50%;
 	background-color: #9129a2;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end; /* Pousse l'image vers le bas du cercle */
+	align-items: flex-end;
 	overflow: hidden;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .character-image {
 	position: absolute;
-	bottom: 0; /* Positionne l'image au bas du cercle */
-	width: 100%; /* S'ajuste à la largeur du cercle */
-	height: auto; /* Garde les proportions de l'image */
-	object-fit: contain; /* L'image garde ses proportions */
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+/* Style du bouton flèche */
+.arrow-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	width: 60px; 
+	height: 60px; 
+	border-radius: 50%; /* Forme ronde */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s;
+	margin-top: 10px ;
+}
+
+.arrow-button:hover {
+	transform: scale(1.1);
+}
+
+/* Triangle gauche */
+.arrow-button.left::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 20px 15px 0; /* Taille et orientation du triangle */
+	border-color: transparent #f8ac21 transparent transparent;
+}
+
+/* Triangle droit */
+.arrow-button.right::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 0 15px 20px; /* Taille et orientation du triangle */
+	border-color: transparent transparent transparent #f8ac21;
 }
