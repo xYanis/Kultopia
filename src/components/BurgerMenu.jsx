@@ -3,7 +3,9 @@ import { useState } from "react";
 
 function BurgerMenu() {
 	const [isOpen, setIsOpen] = useState(false);
-	const toggleMenu = () => setIsOpen(!isOpen);
+	const toggleMenu = () => {
+		setIsOpen(!isOpen);
+	};
 
 	return (
 		<header className={`header ${isOpen ? "visible" : ""}`}>
@@ -17,16 +19,16 @@ function BurgerMenu() {
 			</div>
 			<nav className={`menu ${isOpen ? "visible" : ""}`}>
 				<ul>
-					<a href="../pages/App.jsx">
+					<a className="home" href="../pages/App.jsx">
 						<li>Home</li>
 					</a>
-					<a href="#">
+					<a className="contact" href="#">
 						<li>Contact</li>
 					</a>
-					<a href="#">
+					<a className="about" href="#">
 						<li>About us</li>
 					</a>
-					<a href="#">
+					<a className="update" href="#">
 						<li>Update</li>
 					</a>
 				</ul>

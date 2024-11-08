@@ -1,5 +1,5 @@
 .burger-menu {
-    width: 2.25rem;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -16,12 +16,12 @@ span {
 }
 
 .span2 {
-    width: 2.25rem;
+    width: 2.5rem;
     transition: opacity .3s ease;
 }
 
 .burger-menu.open .span1 {
-    transform: translateY(0.7rem) rotate(45deg);
+    transform: translateY(0.875rem) rotate(45deg);
 }
 
 .burger-menu.open .span2 {
@@ -30,43 +30,92 @@ span {
 }
 
 .burger-menu.open .span3 {
-    transform: translateY(-0.7rem) rotate(-45deg);
-}
-
-.menu {
-    height: 10rem;
-    transition: opacity 0.5s ease;
-    opacity: 0;
+    transform: translateY(-0.875rem) rotate(-45deg);
 }
 
 .header {
     width: 8rem;
+    max-height: 15rem;
     padding: .75rem;
+    background-color: rgba(89, 2, 102, 0.4);
+    border-radius: 0 0 .5rem 0;
+    animation: fadeOutBackground 0.7s forwards;
 }
 
 .header.visible {
-    background-color: rgba(89, 2, 102, 0.4);
-    border-radius: 0 0 .5rem 0;
-    opacity: 1;
+    animation: fadeInBackground 0.7s forwards;
 }
 
+@keyframes fadeInBackground {
+    from {
+        background-color: rgba(89, 2, 102, 0);
+    }
+
+    to {
+        background-color: rgba(89, 2, 102, 0.4);
+    }
+}
+
+@keyframes fadeOutBackground {
+    from {
+        background-color: rgba(89, 2, 102, 0.4);
+    }
+
+    to {
+        background-color: rgba(89, 2, 102, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+.menu {
+    height: 10rem;
+    animation: fadeOut .8s forwards;
+    pointer-events: none;
+}
+
+
 .menu.visible {
-    transition: opacity 0.5s ease;
-    opacity: 1;
+    animation: fadeIn .8s forwards;
+    pointer-events: all;
 }
 
 ul {
     display: flex;
     flex-direction: column;
-    gap: .65rem;
-    margin: 1rem 0 0 1rem;
+    gap: 1rem;
+    margin-top: 0.1rem;
+    align-items: center;
     list-style: none;
+    font-size: 1rem;
 }
 
 a {
     display: block;
-    width: 4.75rem;
+    width: 4.5rem;
     text-decoration: none;
     color: white;
-    border-bottom: solid .1rem white;
+    border-bottom: solid .15rem white;
 }
