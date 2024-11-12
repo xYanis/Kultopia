@@ -46,9 +46,9 @@
 	display: flex;
 	justify-content: space-between;
 	/* Placer les flèches à gauche et à droite */
-	width: 70%;
+	width: 6rem;
 	position: absolute;
-	top: 38%;
+	top: 24rem;
 	z-index: 1;
 	/* Centrer verticalement les flèches */
 	transform: translateY(-50%);
@@ -69,7 +69,21 @@
 	justify-content: center;
 	transition: transform 0.2s;
 	margin-top: 10px;
-	position: relative; /* Nécessaire pour que les pseudo-éléments soient positionnés par rapport au cercle */
+	position: absolute; /* Nécessaire pour que les pseudo-éléments soient positionnés par rapport au cercle */
+}
+
+/* Flèche gauche */
+.arrow-button.left {
+	left: -80px; /* Distance fixe à gauche de l'avatar */
+	top: 50%; /* Centrer verticalement */
+	transform: translateY(-50%); /* Ajustement pour centrer */
+}
+
+/* Flèche droite */
+.arrow-button.right {
+	right: -80px; /* Distance fixe à droite de l'avatar */
+	top: 50%; /* Centrer verticalement */
+	transform: translateY(-50%); /* Ajustement pour centrer */
 }
 
 .arrow-button:hover {
@@ -177,4 +191,10 @@ button:hover {
 button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (min-width: 1024px) {
+	.arrow-buttons-container {
+		padding: 0 40px;
+	}
 }
