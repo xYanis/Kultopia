@@ -197,7 +197,7 @@ a {
     }
 
     header {
-        scale: 2;
-        translate: 60px 100px;
+        scale: 1.5;
+        translate: 20% 25%;
     }
 }

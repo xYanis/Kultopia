@@ -69,17 +69,20 @@
 	justify-content: center;
 	transition: transform 0.2s;
 	margin-top: 10px;
-	position: absolute; /* Nécessaire pour que les pseudo-éléments soient positionnés par rapport au cercle */
+	position: absolute;
+	/* Nécessaire pour que les pseudo-éléments soient positionnés par rapport au cercle */
 }
 
 /* Flèche gauche */
 .arrow-button.left {
-	left: -80px; /* Distance fixe à gauche de l'avatar */
+	left: -80px;
+	/* Distance fixe à gauche de l'avatar */
 }
 
 /* Flèche droite */
 .arrow-button.right {
-	right: -80px; /* Distance fixe à droite de l'avatar */
+	right: -80px;
+	/* Distance fixe à droite de l'avatar */
 }
 
 .arrow-button:hover {
@@ -96,10 +99,14 @@
 	border-width: 15px 20px 15px 0;
 	/* Taille et orientation du triangle */
 	border-color: transparent #f8ac21 transparent transparent;
-	position: absolute; /* Positionnement absolu */
-	left: 44%; /* Centrer horizontalement */
-	top: 50%; /* Centrer verticalement */
-	transform: translate(-50%, -50%); /* Ajustement pour centrer */
+	position: absolute;
+	/* Positionnement absolu */
+	left: 44%;
+	/* Centrer horizontalement */
+	top: 50%;
+	/* Centrer verticalement */
+	transform: translate(-50%, -50%);
+	/* Ajustement pour centrer */
 }
 
 /* Triangle droit */
@@ -112,10 +119,14 @@
 	border-width: 15px 0 15px 20px;
 	/* Taille et orientation du triangle */
 	border-color: transparent transparent transparent #f8ac21;
-	position: absolute; /* Positionnement absolu */
-	left: 57%; /* Centrer horizontalement */
-	top: 50%; /* Centrer verticalement */
-	transform: translate(-50%, -50%); /* Ajustement pour centrer */
+	position: absolute;
+	/* Positionnement absolu */
+	left: 57%;
+	/* Centrer horizontalement */
+	top: 50%;
+	/* Centrer verticalement */
+	transform: translate(-50%, -50%);
+	/* Ajustement pour centrer */
 }
 
 .pseudo-section {
@@ -146,23 +157,6 @@
 	margin-top: 5px;
 }
 
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-
-a:hover {
-	color: #535bf2;
-}
-
-body {
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;
@@ -190,7 +184,7 @@ button:focus-visible {
 }
 
 @media (min-width: 1000px) {
-	body {
+	.character-selector {
 		transform: scale(1.2);
 	}
 }
