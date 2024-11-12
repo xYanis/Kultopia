@@ -1,13 +1,14 @@
-// App.tsx
-import React from "react";
+import "../css/App.css";
+import BurgerMenu from "../components/BurgerMenu";
 import SelectCharacter from "../components/SelectCharacter";
 
 function App() {
-	return (
-		<div className="App">
-			<SelectCharacter />
-		</div>
-	);
+	return ( 
+    <div>
+    <BurgerMenu />
+    <SelectCharacter />
+    </div>
+ );
 }
 
 export default App;
