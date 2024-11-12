@@ -48,7 +48,7 @@
 	/* Placer les flèches à gauche et à droite */
 	width: 6rem;
 	position: absolute;
-	top: calc(50% - 105px);
+	top: calc(50vh - 70px);
 	z-index: 1;
 	/* Centrer verticalement les flèches */
 	transform: translateY(-50%);
@@ -87,7 +87,7 @@
 
 .arrow-button:hover {
 	transform: scale(1.1);
-	border: 2px solid #48cfae;
+	border: solid 2px #48cfae;
 }
 
 /* Triangle gauche */
@@ -130,7 +130,7 @@
 	/* Ajustement pour centrer */
 }
 
-.arrow-button:hover::after .pseudo-section {
+.pseudo-section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
