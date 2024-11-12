@@ -39,12 +39,86 @@ span {
     padding: .75rem;
     background-color: rgba(89, 2, 102, 0.4);
     border-radius: 0 0 .5rem 0;
-    animation: fadeOutBackground 0.8s forwards;
-    animation-delay: 0.7s;
+    animation: fadeOutBackground 0.7s 0.6s forwards;
 }
 
 .header.visible {
     animation: fadeInBackground 0.7s forwards;
+}
+
+.menu {
+    height: 10rem;
+    pointer-events: none;
+}
+
+.menu.visible {
+    animation: fadeIn .8s forwards;
+    pointer-events: all;
+}
+
+.menu.fade-out {
+    pointer-events: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.1rem;
+    align-items: center;
+    list-style: none;
+    font-size: 1rem;
+}
+
+a {
+    display: block;
+    width: 5rem;
+    text-decoration: none;
+    border-bottom: solid 2px white;
+    color: white;
+    opacity: 0;
+    position: relative;
+}
+
+.menu.visible a {
+    animation: fadeIn 0.5s forwards ease;
+}
+
+.menu.visible a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.menu.visible a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.menu.visible a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.menu.visible a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.menu.fade-out a {
+    animation: fadeOut 0.5s forwards ease;
+    opacity: 1;
+}
+
+.menu.fade-out a:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.menu.fade-out a:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.menu.fade-out a:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.menu.fade-out a:nth-child(1) {
+    animation-delay: 0.8s;
 }
 
 @keyframes fadeInBackground {
@@ -91,77 +165,39 @@ span {
     }
 }
 
-.menu {
-    height: 10rem;
-    pointer-events: none;
-}
+@media(min-width: 1000px) {
+    a {
+        border: 0px;
+    }
 
-.menu.visible {
-    animation: fadeIn .8s forwards;
-    pointer-events: all;
-}
+    li:hover {
+        transform: scale(1.1) translateX(4px);
+        transition: transform 0.5s ease;
+    }
 
-.menu.fade-out {
-    pointer-events: none;
-}
+    li {
+        transition: transform 0.5s ease;
+    }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 0.1rem;
-    align-items: center;
-    list-style: none;
-    font-size: 1rem;
-}
+    li::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width .4s;
+    }
 
-a {
-    display: block;
-    width: 4.5rem;
-    text-decoration: none;
-    color: white;
-    border-bottom: solid .15rem white;
-    opacity: 0;
-}
+    a {
+        transition: transform 0.5s ease;
+    }
 
-.menu.visible a {
-    animation: fadeIn 0.5s forwards ease;
-}
+    li:hover::after {
+        width: 100%;
+    }
 
-.menu.visible a:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.menu.visible a:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.menu.visible a:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.menu.visible a:nth-child(4) {
-    animation-delay: 0.8s;
-}
-
-.menu.fade-out a {
-    animation: fadeOut 0.5s forwards ease;
-    opacity: 1;
-    /* Set opacity to ensure visibility before fade-out starts */
-}
-
-.menu.fade-out a:nth-child(4) {
-    animation-delay: 0.2s;
-}
-
-.menu.fade-out a:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.menu.fade-out a:nth-child(2) {
-    animation-delay: 0.6s;
-}
-
-.menu.fade-out a:nth-child(1) {
-    animation-delay: 0.8s;
+    header {
+        scale: 2;
+        translate: 60px 100px;
+    }
 }
