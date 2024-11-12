@@ -175,11 +175,13 @@ a {
         transition: transform 0.5s ease;
     }
 
-    li {
+    a {
         transition: transform 0.5s ease;
+        position: relative;
+        z-index: 2;
     }
 
-    li::after {
+    a::after {
         content: '';
         display: block;
         width: 0;
@@ -188,16 +190,18 @@ a {
         transition: width .4s;
     }
 
-    a {
+    li {
         transition: transform 0.5s ease;
     }
 
-    li:hover::after {
+    a:hover::after {
         width: 100%;
     }
 
     header {
         scale: 1.5;
         translate: 20% 25%;
+        position: relative;
+        z-index: 1;
     }
 }
