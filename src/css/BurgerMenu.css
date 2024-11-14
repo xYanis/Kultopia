@@ -34,12 +34,16 @@ span {
 }
 
 .header {
-    width: 8rem;
+    width: 100%;
     max-height: 15rem;
     padding: .75rem;
     background-color: rgba(89, 2, 102, 0.4);
     border-radius: 0 0 .5rem 0;
     animation: fadeOutBackground 0.7s 0.6s forwards;
+}
+
+.header {
+    width: 8rem;
 }
 
 .header.visible {
@@ -166,6 +170,10 @@ a {
 }
 
 @media(min-width: 1000px) {
+    .burger-menu {
+        margin-left: 1rem;
+    }
+    
     a {
         border: 0px;
     }
@@ -198,10 +206,14 @@ a {
         width: 100%;
     }
 
-    header {
+    .header {
         scale: 1.5;
         translate: 20% 25%;
         position: relative;
         z-index: 1;
+    }
+    .logo {
+        scale: 1.5;
+        translate : -20% 25%;
     }
 }

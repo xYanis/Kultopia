@@ -45,14 +45,10 @@
 .arrow-buttons-container {
 	display: flex;
 	justify-content: space-between;
-	/* Placer les flèches à gauche et à droite */
 	width: 6rem;
-	position: absolute;
-	top: calc(50vh - 70px);
+	margin-bottom: 11rem;
+	position: fixed;
 	z-index: 1;
-	/* Centrer verticalement les flèches */
-	transform: translateY(-50%);
-	/* Ajuster la position verticale */
 }
 
 /* Style du bouton flèche */
@@ -149,7 +145,7 @@
 }
 
 .pseudo-section input::placeholder {
-	color: #aaa;
+	color: #ffffff;
 }
 
 .error-message {
@@ -177,6 +173,7 @@ button {
 
 @media (min-width: 1000px) {
 	.character-selector {
-		transform: scale(1.2);
+		transform: scale(1.6);
+		margin-top: 10rem;
 	}
 }

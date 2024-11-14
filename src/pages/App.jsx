@@ -5,10 +5,10 @@ import SelectCharacter from "../components/SelectCharacter";
 function App() {
 	return ( 
     <div>
-    <BurgerMenu />
-    <SelectCharacter />
+        <BurgerMenu />
+        <SelectCharacter />
     </div>
- );
+);
 }
 
 export default App;
