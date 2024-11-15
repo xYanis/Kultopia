@@ -1,14 +1,7 @@
-import "../css/App.css";
-import BurgerMenu from "../components/BurgerMenu";
-import SelectCharacter from "../components/SelectCharacter";
+import '../css/App.css'
 
 function App() {
-	return ( 
-    <div>
-        <BurgerMenu />
-        <SelectCharacter />
-    </div>
-);
+
 }
 
-export default App;
+export default App
