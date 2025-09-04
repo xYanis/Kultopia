@@ -1,8 +1,36 @@
-# React + Vite
+# 🎭 Kultopia – Jeu de Quiz Géant *(Projet en cours)*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**⚠️ AVERTISSEMENT : Ce projet est en développement et certaines fonctionnalités ne sont pas encore terminées.**  
+**Kultopia** est une plateforme de quiz interactif permettant à plusieurs joueurs de tester leurs connaissances dans différentes catégories culturelles, avec un **joueur admin** qui gère la partie et attribue les points.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies utilisées
+
+- React : pour le frontend dynamique et interactif
+- HTML5 : structure des pages
+- CSS : mise en forme et design
+- JavaScript : logique du jeu et interactions
+- MySQL : gestion des scores, utilisateurs et questions
+
+## 📌 Fonctionnalités principales (en cours)
+
+### 🎲 Types de quiz
+- 🧑‍🎤 **Célébrités / Personnages / Monuments** : devinez à partir d’une photo.  
+- 🎬 **Films & Séries** : retrouvez l’œuvre à partir d’un extrait vidéo ou d’une réplique culte.  
+- 🎵 **Musique** : identifiez une chanson ou un artiste à partir d’un extrait sonore.  
+- ✅❌ **Vrai ou Faux** : répondez aux questions par vrai ou faux.
+
+### 👤 Rôle des joueurs
+- **Joueurs** : répondent aux questions via l’interface.  
+- **Admin** :  
+  - anime la partie,  
+  - corrige les réponses à la fin de chaque manche,  
+  - ajuste les points si nécessaire,  
+  - valide le **classement final**.  
+
+### 🏆 Fin de partie
+- Classement affiché en fonction des scores.  
+- Possibilité d’ajouter ou retirer des points manuellement avant validation finale.  
+
+---
